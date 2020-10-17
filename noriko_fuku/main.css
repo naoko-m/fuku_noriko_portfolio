@@ -1,0 +1,330 @@
+@charset "UTF-8";
+html {
+  font-size: 14px; 
+  height:100%;
+  /* ルート要素のフォントサイズを1rem=14pxと定義する */
+} 
+
+body {
+  margin-top:77px;
+  color: #000;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #f8f9fa;
+  height:100%;
+}
+
+.wrapper {
+	overflow: hidden;
+	width: 100%;
+  position: relative;
+  min-height: 100%;
+}
+
+#contents{
+  padding-bottom:250px;
+}
+
+footer {
+  height:250px;
+  background-color:#f3f5f7;
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+
+}
+
+
+
+section {
+  /*margin-top:-77px;*/
+  /*padding-top:77px;*/
+  padding-bottom: 100px;
+}
+
+.section__titile {
+  padding:30px 0px 40px 0px;
+  display: inline-block;
+}
+
+.section__titile h2{
+  font-size: 50px;
+  display:inline-block;
+  color: #3d4b58;
+}
+
+.section__titile h4{
+  color: #3d4b58;
+  display:inline-block;
+  padding-left: 30px;
+}
+
+#works {
+  padding-top: 0;
+}
+
+/*トップ動画*/
+.top__video{
+ min-width: 100%;
+ min-height: 100%;
+ width: auto;
+ height: auto;
+ background-size: cover;
+}
+
+/*コンセプト*/
+#concept {
+  width: 100%;
+  background-color: #f8f9fa;
+  margin-top: 100px;
+}
+
+
+
+
+.con__gaku__pic .con__gaku__sen {
+  color: #dedede;
+	/*text-align: center;*/
+}
+
+.con__gaku__pic {
+ overflow:	hidden;
+ position:	relative;
+ 
+}
+
+.con__gaku__pic .gaku__mask {
+ 	width: 100%;
+	height:	100%;
+	position:	absolute;	
+	top: 0;
+  left: 0;
+	opacity: 0;	
+	background-color:	rgba(0,0,0,0.6);	
+	-webkit-transition:	all 0.2s ease;
+	transition:	all 0.7s ease;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.con__gaku__pic:hover .gaku__mask {
+	opacity: 1;
+}
+
+
+/*額縁*/
+.con__sen__pic {
+  margin-top:100px;
+  overflow:	hidden;
+  position:	relative;
+ 
+}
+
+.con__sen__pic .con__sen__sen {
+  color: #dedede;
+	/*text-align: center;*/
+	/*padding-top:100px;*/
+}
+
+.con__sen__pic .sen__mask {
+ 	width: 100%;
+	height:	100%;
+	position:	absolute;	
+	top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+	opacity: 0;	
+	background-color:	rgba(0,0,0,0.6);	
+	-webkit-transition:	all 0.2s ease;
+	transition:	all 0.7s ease;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.con__sen__pic:hover .sen__mask {
+	opacity: 1;
+}
+
+@media screen and (min-width:0px){
+  .con__sen__pic .con__sen__sen,.con__gaku__sen {
+    font-size: 70%;}
+}
+
+@media screen and (min-width:365px){
+  .con__sen__pic .con__sen__sen,.con__gaku__sen {
+    font-size: 78%;}
+}
+
+@media screen and (min-width:430px){
+  .con__sen__pic .con__sen__sen,.con__gaku__sen {
+    font-size: 98%;}
+}
+
+@media screen and (min-width:577px){
+  .con__sen__pic .con__sen__sen,.con__gaku__sen {
+    font-size: 98%;}
+}
+
+@media screen and (min-width:768px){
+  .con__sen__pic .con__sen__sen,.con__gaku__sen {
+    font-size: 75%;}
+}
+  .shedule__detail, .profile__icon {
+    padding-bottom:0;
+  }
+
+@media screen and (min-width:992px){
+  .con__sen__pic .con__sen__sen,.con__gaku__sen {
+    font-size: 98%;}
+}
+ .shedule__detail, .profile__icon {
+    padding-bottom:20px;
+  }
+
+
+
+
+/*プロフィール*/
+.profile__sentence .name {
+  font-size: 19px;
+  color: black;
+}
+
+.fa-twitter,.fa-facebook-f,.fa-instagram,.fa-images {
+  color:#000;
+  margin-right: 10px;
+}
+
+.fa-twitter:hover,.fa-facebook-f:hover,.fa-instagram:hover,.fa-images:hover{
+  opacity:0.3;
+}
+
+/*アコーディオン*/
+.accordion-container .accordion-title {
+  position: relative;
+  margin: 0;
+  padding: 0.625em 0.625em 0.625em 2em;
+  /*font-size: 1.25em;*/
+  font-weight: normal;
+  color: #000;
+  cursor: pointer;
+}
+
+.accordion-conteainer p {
+  padding-left:5px;
+}
+
+.accordion-container .accordion-title:active,
+.accordion-title.open { 
+  color:#000;
+  background-color: #f3f5f7;
+}
+
+.accordion-container .accordion-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 15px;
+  height: 2px;
+  /*縦線に*/
+  transform: rotate(90deg);
+  background: #000;
+  transition: all .2s ease-in-out;
+
+}
+
+.accordion-container .accordion-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  /*横線*/
+  width: 15px;
+  height: 2px;
+  background: #000;
+  transition: all .2s ease-in-out;
+ 
+}
+
+.accordion-container .accordion-title.open::before {
+  transform: rotate(180deg);
+}
+
+.accordion-container .accordion-title.open::after {
+  opacity: 0;
+}
+
+.accordion-content {
+  padding-left: 2.3125em;
+  padding-top:8px;
+  /*border-bottom: 1px solid #0079c1;*/
+}
+
+
+.frames__pictures {
+  margin-top: 100px;
+}
+
+
+/*main works*/
+.works__mainpic p{
+  font-size: 40px;
+}
+
+
+.d-inline-block{
+  overflow:hidden;
+}
+
+
+.d-inline-block img {
+  width: 600px;
+  transition:1s all;
+
+}
+
+.lines__pictures img:hover {
+    transform:scale(1.2,1.2);
+    transition:1s all;
+
+}
+
+
+
+.schedule p {
+  margin-bottom:0;
+}
+
+
+#form__sent {
+  display:none;
+}
+
+.form__alert{
+  visibility: hidden;
+}
+
+.footer__wrapper {
+  height: 250px;
+  display:flex;
+}
+
+.footer__wrapper .footer__content {
+  flex: 0 1 auto;
+  margin: auto;
+}
+
+.footer__small {
+  text-align:center;
+  color: gray;
+  padding-top:10px;
+}
+
+.footer__content .fa-twitter{
+  margin-left: 8px;
+}
+
